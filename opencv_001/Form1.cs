@@ -152,22 +152,6 @@ namespace opencv_001
                     , 1
                     );
             }
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             pictureBox1.Image = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(frame_img_source_01);
 
@@ -221,8 +205,8 @@ namespace opencv_001
             //pictureBox4.Image = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(frame_img_source_03);
 
             simpleOCR = new SimpleOCR();
-            var trainingImages = simpleOCR.ReadTrainingImages("C://Users//dev-yym//source//repos//opencv_001//Numbers_dit", "*.png");
-            //var trainingImages = simpleOCR.ReadTrainingImages("C://Users//dev-yym//source//repos//opencv_001//Numbers", "*.png");
+            var trainingImages = simpleOCR.ReadTrainingImages("//opencv_001//Numbers_dit", "*.png");
+            //var trainingImages = simpleOCR.ReadTrainingImages("//opencv_001//Numbers", "*.png");
             kNearestTrainData = simpleOCR.TrainData(trainingImages);
             log_2.Text = "\r\n" + Convert.ToString(DateTime.Now) + "-simpleOCR-" + simpleOCR.DoOCR_ReturnString(kNearestTrainData, frame_img_source_03) + log_2.Text;
             */
@@ -287,8 +271,8 @@ namespace opencv_001
                         Cv2.Threshold(frame_img_Ocr_source, frame_img_Ocr_source, 150, 255, ThresholdTypes.BinaryInv);
 
                         simpleOCR = new SimpleOCR();
-                        var trainingImages = simpleOCR.ReadTrainingImages("C://Users//dev-yym//source//repos//opencv_001//Numbers_dit", "*.png");
-                        //var trainingImages = simpleOCR.ReadTrainingImages("C://Users//dev-yym//source//repos//opencv_001//Numbers", "*.png");
+                        var trainingImages = simpleOCR.ReadTrainingImages("//opencv_001//Numbers_dit", "*.png");
+                        //var trainingImages = simpleOCR.ReadTrainingImages("//opencv_001//Numbers", "*.png");
                         kNearestTrainData = simpleOCR.TrainData(trainingImages);
                         log_2.Text = "\r\n" + Convert.ToString(DateTime.Now) + "-simpleOCR-" + simpleOCR.DoOCR_ReturnString(kNearestTrainData, frame_img_Ocr_source) + log_2.Text;
                         

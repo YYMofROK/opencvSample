@@ -209,12 +209,7 @@ namespace opencv_001
             log_1.Text = "\r\n" + Convert.ToString(DateTime.Now) + "-TesseractOCR-" + TesseractOCR(frame_img_source_03) + log_1.Text;
 
 
-
-
-
-
             /*
-
             Cv2.Threshold(frame_img_source_03, frame_img_source_03, 150, 255, ThresholdTypes.BinaryInv);
             Cv2.FastNlMeansDenoising(frame_img_source_03, frame_img_source_03, 50);
             Cv2.FastNlMeansDenoising(frame_img_source_03, frame_img_source_03, 50);
